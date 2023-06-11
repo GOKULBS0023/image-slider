@@ -1,0 +1,130 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    /*1rem = 10px*/
+}
+
+body {
+    background-color: #eee;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+a:active,
+a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* container */
+.container {
+    margin: 10rem;
+}
+
+/* slider-container */
+.slider-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #49a6e9;
+    border-radius: 5px;
+    height: 65vh;
+    width: 75vw;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #c5e5fc;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    transition: all 0.25s ease-in-out;
+    text-align: center;
+}
+
+.slide h1 {
+    font-size: 7rem;
+}
+
+.slide h4 {
+    font-size: 3rem;
+}
+
+.person-slide {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.slide:nth-child(1) h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slide:nth-child(3) {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("./img-2.jpeg") center/cover no-repeat;
+}
+
+/* Btn container */
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+button {
+    margin: 0rem 2rem;
+    font-size: 2.3rem;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #617d98;
+    transition: all 0.5s linear;
+}
+button:hover{
+    color: #324d67;
+}
+@media only screen and (max-width:700px){
+    html{
+        font-size: 50%;
+    }
+    .container {
+        margin: 5rem;
+    }
+    .slider-container {
+        height: 70vh;
+        width: 65vw;
+        margin: auto;
+        overflow: hidden;
+    }
+}
